@@ -5,7 +5,7 @@ const connect = new Promise((res,rej)=> {
         rej("Install Metamask");
 } window.ethereum.request({method:"eth_requestAccounts"});
 let web3 =new Web3(window.ethereum);
-let contract = new web3.eth.Contract(abi,"0x072BD779102Cb4bD6bd52D4f7D7881dB22162b72");
+let contract = new web3.eth.Contract(abi,"0xBbBCBF27383089214EF39d0451699C18403671BA");
 web3.eth.getAccounts().then((accounts)=>{
     contract.methods
     .totalSupply()
